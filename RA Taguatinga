@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Região Administrativa de Taguatinga - Página Institucional</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #003366;
+        }
+
+        #contatoForm {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contatoForm label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        #contatoForm input, #contatoForm textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contatoForm button {
+            padding: 0.75rem;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contatoForm button:hover {
+            background-color: #002244;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Região Administrativa de Taguatinga</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A Região Administrativa de Taguatinga é responsável por promover o desenvolvimento social, econômico e urbano da localidade, atendendo aos cidadãos com eficiência e transparência.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos uma ampla gama de serviços públicos, incluindo emissão de documentos, assistência social, atendimento ao empreendedor, e muito mais.</p>
+        </section>
+
+        <section id="localizacao">
+            <h2>Localização</h2>
+            <p>Nosso endereço é Praça do Relógio, Taguatinga Centro, Distrito Federal.</p>
+            <p>Horário de Funcionamento: Segunda a Sexta, das 8h às 18h.</p>
+            <center> <br><img src="pracadorelogio.jpg" alt="pracadorelogio" width="400"> </center>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form id="contatoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite sua mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Região Administrativa de Taguatinga. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('contatoForm').addEventListener('submit', function(event) {
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let mensagem = document.getElementById('mensagem').value;
+
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos.');
+                event.preventDefault();
+            } else if (!email.includes('@')) {
+                alert('Por favor, insira um email válido.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
