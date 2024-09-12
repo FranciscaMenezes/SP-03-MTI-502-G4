@@ -125,7 +125,7 @@
             <h2>Localização</h2>
             <p>Nosso endereço é Praça do Relógio, Taguatinga Centro, Distrito Federal.</p>
             <p>Horário de Funcionamento: Segunda a Sexta, das 8h às 18h.</p>
-            <center> <br><img src="pracadorelogio.jpg" alt="pracadorelogio" width="400"> </center>
+            <center> <br><img src="https://github.com/Curti-git/SP3-MTI-502/blob/main/figura%20tagua%202.jpg" alt="praça do relogio" width="400"> </center>
         </section>
 
         <section id="contato">
